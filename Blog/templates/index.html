@@ -1,10 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Hi, {{ user.username }}!</h1>
-{% for post in posts %}
-<div>
-    <p>{{ post.author.username }} says: <b>{{ post.body }}</b></p>
+<div class="jumbotron text-center">
+    <h1>Welcome to my Blog</h1>
+    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. A quisquam eaque culpa officiis sequi non
+        ad, voluptatibus, accusantium quos sit similique fugiat dolores quia laudantium, beatae praesentium dolore
+        cupiditate ea.
+    </p>
 </div>
+<div class="jumbotron text-center">
+    <h1>Hi, {{ current_user.username }}!</h1>
+    {% for post in posts %}
+    <div>
+        <p class="lead">{{ post.author.username }} says: <b>{{ post.body }}</b></p>
+    </div>
+</div>
+
+
 {% endfor %}
 {% endblock %}

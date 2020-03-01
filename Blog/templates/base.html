@@ -6,16 +6,15 @@
     {% else %}
     <title>Welcome to Microblog</title>
     {% endif %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 
 <body>
-    <div>
-        Microblog:
-        <a href="/index">Home</a>
-        <a href="/login">Login</a>
-    </div>
-    <hr>
-    {% block content %}{% endblock %}
+
+    {% include 'include/_navbar.html'%}
+    <div class="container">{% block content %}{% endblock %}</div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
